@@ -1,0 +1,41 @@
+@use "base/variables" as var;
+@use "base/mixins" as mq;
+
+.header {
+  color: var.$black;
+  padding: 5rem 0;
+  position: relative;
+
+  @include mq.mobile { 
+    
+  }
+
+  @include mq.tablet { 
+    
+  }
+
+  @include mq.desktop { 
+    
+  }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.6;
+    background-color: var.$black;
+  }
+}
+
+.header__content {
+  position: relative;
+  z-index: 10000;
+}
+
+//Header de cada pagina
+.header-start {
+  background-image: url(../img/header_inicio.jpg);
+}
